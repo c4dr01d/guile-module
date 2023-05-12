@@ -13,5 +13,5 @@
     (define keyword-constructor
       (let ((default-record (constructor default ...)))
         (lambda* (#:key (inherit default-record)
-                        (field (getter inherit)) ...)
+                  (field (getter inherit)) ...)
           (constructor field ...))))))

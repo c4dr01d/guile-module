@@ -13,8 +13,8 @@
       (lambda () (environ old-env)))))
 (define-syntax-rule (with-environment-excursion env body ...)
   (environment-excursion
-    (lambda () (environ env))
-    (lambda () body ...)))
+   (lambda () (environ env))
+   (lambda () body ...)))
 (define* (process-exists? regexp #:key uid exact?)
   (let ((args `("pgrep" ,regexp
                 ,@(if exact? '("--exact") '())
